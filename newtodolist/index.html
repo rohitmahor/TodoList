@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width ,initial-scale=1">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair|Indie+Flower" rel="stylesheet">
+</head>
+<body>
+    <header>
+       <h1>Todo<span>List</span></h1>
+      <br> <span id="date"></span>
+      <span id="taskcount">
+          <span id="span1">Total&nbsp;&nbsp;&nbsp;</span><span id="total"> </span><br>
+          <span id="span2">Pending&nbsp;&nbsp;&nbsp;</span><span id="pending"> </span><br>
+          <span id="span3">Complete&nbsp;&nbsp;&nbsp;</span><span id="completed"> </span><br>
+      </span>
+    </header>
+    
+<!--    <span class="modal1"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>-->
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2 class="modal-title" id="myModalLabel">Enter Task</h2>
+            </div>
+            
+            <div class="modal-body" style="overflow: auto;">
+
+                <input id="input" type="text" placeholder="Create task" style="width: 100%;">
+                
+                <div class="form-group" style="overflow: auto;">
+                    <select name="priority" id="priority" class="form-control col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                        <option value="" disabled selected>Select your priority</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                    
+                <div class="button" style="padding: 0px; ">
+                    <button id="button1" class="btn" style="background: #00bf5e;color: beige;" class="close" data-dismiss="modal" aria-label="Close"><span class="text">Add Task</span></button>
+                    <button id="cancel" class="btn" style="background: #00bf5e;color: beige;" class="close" data-dismiss="modal" aria-label="Close"><span class="text">Cancel</span></button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+       <span class="add" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+       
+       <span id="nothing"></span>
+       <div id="ulbox">
+           <ul id="ul" >
+<!--
+               
+                <li >
+                     <span class="done"></span>
+                     <p>Lorem ipsum do </p>
+                     <div id="menu">
+                         <i class="fa fa-pencil icon" aria-hidden="true"></i>
+                         <i class="fa fa-trash-o icon" aria-hidden="true"></i>
+                     </div>
+                </li>
+                
+                -->
+        </ul>
+        <ul id="ul1"></ul>
+       </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+    </script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

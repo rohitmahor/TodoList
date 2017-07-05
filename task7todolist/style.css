@@ -1,0 +1,175 @@
+.container-fluid {
+    overflow: auto;
+    width: 83.3333333%;
+    padding: 0px;
+    position: relative;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+input[type="text"] {
+    height: 50px;
+    border: none;
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-indent: 7px;
+    padding-right: 7px;
+    font-size: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    position: relative;
+}
+
+.btn {
+    border-radius: 5px;
+    height: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 0px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn .sign {
+    display: none;
+}
+
+.container-fluid ul li{
+    background: #fff;
+}
+
+#ul,ul {
+    list-style: none;
+    padding: 0px;
+}
+ul li {
+    height: 50px;
+    border: 1px solid silver;
+    padding: 7px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+ul li div {
+    float: right;
+    font-size: 30px;
+    margin-top: -4px;
+    color: silver;
+}
+
+ul li .delete:before {
+    width: 1px;
+    height: 20px;
+    content: "";
+    border: 1px solid silver;
+    margin: 0 10px;
+}
+
+.done i:hover,i:focus,i:active {
+    color: green;
+}
+
+.delete i:hover {
+    color: red;
+}
+
+p {
+    overflow-x: hidden;
+    width: 88%;
+}
+
+p:hover {
+    overflow-x: auto;
+}
+
+#ul1 {
+    position: relative;
+    margin-top: 20px;
+    padding: 0px;
+}
+
+
+#ul1 li:nth-child(1):before {
+    content: "";
+    border-bottom: 1px solid #f5f5f5;
+    box-shadow: 0px 1px 2px grey;
+    width: 171px;
+    display: table;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin-left: -85px;
+}
+
+@media screen and (max-width: 800px) {
+    p {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .button {
+        position: absolute;
+        left: 83.2%;
+    }
+    
+    .btn {
+        border-radius: 5px;
+    }
+    
+    input[type="text"] {
+        font-size: 18px;
+        border-radius: 5px;
+        padding-right: 17%;
+    }
+    
+    p {
+        
+         overflow-x: auto;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    #ul1 li:nth-child(1):before {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+    p {
+        width: 80%;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    input[type="text"] {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .btn .text {
+        display: none;
+    }
+    
+    .btn .sign {
+        display: inline;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    
+    p{
+        width: 70%;
+    }
+    
+     
+}
