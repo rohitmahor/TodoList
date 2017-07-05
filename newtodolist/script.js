@@ -1,7 +1,6 @@
 'use strict'
 
 var open = false;
-var open1 = false;
 var countp = 0;
 
 if(JSON.parse(localStorage.getItem('todo')) === null) {
@@ -40,9 +39,8 @@ window.onload = function () {
     notodo();
     button1.onclick = function () {
         var value = input.value;
-        ul.innerHTML = '';
         if(input.value === '' || priority.val() === null) {
-            alert('Please Enter Task');
+            alert('Please Enter Task Properly!');
         }
         
         if(input.value != '' && priority.val() !== null) {
@@ -65,6 +63,7 @@ function display1() {
     ul.innerHTML = '';
     ul1.innerHTML = '';
     $('#nothing').html('');
+    open = false;
 
     for(var i = 0 ; i<todolist.length ; i++) {
                 if(JSON.parse(localStorage.getItem('todo'))[i].done === false &&  JSON.parse(localStorage.getItem('todo'))[i].priority === "low") {
@@ -162,6 +161,7 @@ function delete1(el) {
         
         var icon = $(icon);
         var menu = $(menu);
+
         if(open === false) {            
             $(".li"+el).css ({
                 "transition": "1s",
@@ -172,16 +172,6 @@ function delete1(el) {
                 "transform": 'rotate(180deg)',
                 "background": 'beige',
                 "padding-left": '5px'
-            });
-            
-             icon.css({
-                "display": "inline",
-
-            });
-
-            menu.animate({
-                "width": "100px",
-                "font-size": "25px"
             });
             
             if(JSON.parse(localStorage.getItem('todo'))[el].priority === "high") {
@@ -200,9 +190,18 @@ function delete1(el) {
                  menu.css ({
                     "border-left": "10px solid #00bf5e"
                  });
-            }   
-        open = true; 
-        return;
+            }
+
+            icon.css({
+                "display": "inline",
+            });
+
+            menu.css({
+                "width": "100px",
+                "font-size": "25px"
+            });
+        open = true;
+        return ;
     }
         
         else if(open === true)  {
@@ -214,28 +213,30 @@ function delete1(el) {
             
             if(JSON.parse(localStorage.getItem('todo'))[el].priority === "high") {
                  $(".li"+el).css ({
+                     "transition": "1s",
                     "border-right": "10px solid #d32f2f"
                  });
             }
             
            else if(JSON.parse(localStorage.getItem('todo'))[el].priority === "medium") {
                  $(".li"+el).css ({
+                     "transition": "1s",
                     "border-right": "10px solid #ffd54f"
                  });
             }
             
             else if(JSON.parse(localStorage.getItem('todo'))[el].priority === "low") {
                  $(".li"+el).css ({
+                     "transition": "1s",
                     "border-right": "10px solid #00bf5e"
                  });
             }
             
             icon.css({
                  "display": "none",
-
             });
 
-            menu.animate({
+            menu.css({
                 "width": "0px",
                 "border-left": "0px",
                 "font-size": "0px"
@@ -248,7 +249,7 @@ function delete1(el) {
             });
 
         open = false;
-        return;
+        return ;
     }
         
 } 
@@ -257,6 +258,7 @@ function edit(el) {
         input.value = todolist[el].task;
         todolist.splice(el,1);   
         localStorage.setItem('todo',JSON.stringify(todolist));
+        open = false;
         display1();  
 }
 

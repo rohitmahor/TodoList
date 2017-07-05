@@ -226,12 +226,6 @@ ul > li > p:hover{
     cursor: pointer;
 }
 
-ul > li:first-child:after {
-    content: "";
-    border-bottom: 0;
-    box-shadow: none;
-}
-
 ul > li:first-child .done:first-child:hover:before {
     color: #00bf5e;
 }
