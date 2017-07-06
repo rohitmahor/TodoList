@@ -408,6 +408,19 @@ strike {
 
 
 @media screen and (min-width: 767px) {
+
+    header {
+        height: 250px;
+    }
+
+    header > #taskcount {
+        height: 250px;
+    }
+
+    header > #taskcount > span {
+        margin-top: 30px;
+        font-size: 25px;
+    }
     
     #date {
         font-size: 18px;
@@ -430,9 +443,9 @@ strike {
     
     header > #taskcount  > #completed,  header > #taskcount  > #pending, header > #taskcount  > #total {
 /*        background: black;*/
-        width: 25px;
+        width: 30px;
         border-radius: 50%;
-        font-size: 20px;
+        /*font-size: 20px;*/
     }
     
     #taskcount > #span2{
