@@ -69,7 +69,7 @@ header > #taskcount > span{
     width: 100%;
 }
 
-#button1,#cancel {
+#button1,#cancel,#cancel1,#editbutton {
     display: inline-block;
     margin: 0 auto;
     font-weight: bold;
@@ -179,14 +179,22 @@ input[type="text"] {
     background: #f5f5f5
 }
 
+.done {
+    position: relative;
+    /*height:30px;*/
+}
+
 
 .done:before {
     font-family: FontAwesome;
     content: "\f05d";
     font-size: 35px;
-    margin: -4px 5px 0px 5px;
+    margin: 0px 0px 0px 5px;
     color: silver;
     display: inline-block;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
 }
 
 .done:hover:before{
@@ -195,17 +203,19 @@ input[type="text"] {
 }
 
 .done1 {
-/*    background: #455a64;*/
+    position: relative;
 }
 
 .done1:before {
     font-family: FontAwesome;
     content: "\f05d";
     font-size: 35px;
-    margin: -4px 5px 0px 5px;
+    margin: 0px 0px 0px 5px;
     color: #00bf5e;
     display: inline-block;
-   
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
 }
 
 
@@ -214,9 +224,9 @@ ul > li > p {
     text-align: justify;
     font-size: 25px;
     color: #262525;
-    padding: 5px 5px 0px 20px;
+    padding: 5px 5px 0px 40px;
     margin-bottom: 0;
-    width: 89%;
+    width: 95%;
     font-weight: bold;
    
 }
@@ -296,7 +306,7 @@ strike {
     font-size: 25px;
     position: absolute;
     top: -5px;
-    left: 48%;
+    left: 50%;
     text-align: center;
     margin-left: -85px;
     color: #757575;
@@ -309,7 +319,6 @@ strike {
 #ul > li:first-child:before {
     content: "Pending Tasks";
     top: 5px;
-    left: 50%;
 }
 
 
